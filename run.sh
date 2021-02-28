@@ -1,7 +1,10 @@
+ORACLE_PWD=`echo $RANDOM `| sha1sum | cut -c 1-12
+CONTAINER_NAME=aci-oracleapex-$RANDOM
 az container create \
-    --name aci-oracleapex-5 \
+    --name $CONTAINER_NAME \
     --resource-group rg-flaskapi-dev \
     --image qrdgliddy/oracle-database:18.4.0-xe \
+    --dns-name-label $CONTAINER_NAME \
     --query ipAddress.fqdn \
     --environment-variables ORACLE_PWD=administrator99 ORACLE_CHARACTERSET=AL32UTF8 \
     --gitrepo-url "https://github.com/dg-hub/oracle-apex-docker.git" \
@@ -9,4 +12,6 @@ az container create \
     --restart-policy Never \
     --ports 8080 \
     --cpu 4 \
-    --memory 6
+    --memory 6 \
+    --out table
+
