@@ -6,3 +6,4 @@ unzip ./$ORDS_FILE -d /opt/oracle/ords
 rm ./$ORDS_FILE
 cp -r /tmp/apex/images/ /opt/oracle/ords/images
 cp /opt/oracle/scripts/properties/apex-ords-params.properties /opt/oracle/ords/
+sed -i "s/{PASSWORD}/${ORACLE_PWD}/g" /opt/oracle/ords/apex-ords-params.properties
