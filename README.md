@@ -1,5 +1,15 @@
 # oracle-apex-docker
-Oracle Apex Docker Container
+Oracle Application Express (Apex) Docker Container for Azure Container Instances
+
+To deploy the following steps are required:
+ - Clone the official Oracle Repo to build Oracle Database XE
+ - Run buildContainerImage script to build the image
+ - Tag the image with your dockerhub.io username
+ - Push the image to DockerHub
+ - Run `az container create` (in `run.sh` file) - it does the following
+   - Download/Unzip/Install Apex
+   - Download/Unzip/Install ORDS
+
 
 ## Docker Base Image
 This project requires the base docker image to be created first
