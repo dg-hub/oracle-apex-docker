@@ -1,0 +1,12 @@
+az container create \
+    --name aci-oracleapex-5 \
+    --resource-group rg-flaskapi-dev \
+    --image qrdgliddy/oracle-database:18.4.0-xe \
+    --query ipAddress.fqdn \
+    --environment-variables ORACLE_PWD=administrator ORACLE_CHARACTERSET=AL32UTF8 \
+    --gitrepo-url "https://github.com/dg-hub/oracle-apex-docker.git" \
+    --gitrepo-mount-path "/opt/oracle/scripts" \
+    --restart-policy Never \
+    --ports 8080 \
+    --cpu 4 \
+    --memory 6
