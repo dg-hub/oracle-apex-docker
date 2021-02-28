@@ -7,7 +7,7 @@ This project requires the base docker image to be created first
  - `git clone https://github.com/oracle/docker-images/tree/main/OracleDatabase`
  - `./docker-images/OracleDatabase/SingleInstance/dockerfiles/buildContainerImage.sh -x -v 18.4.0`
  - `docker tag oracle/database ${DOCKER_USERNAME}/oracle-database`
- - `docker tag oracle/database ${DOCKER_USERNAME}/oracle-database`
+ - `docker push ${DOCKER_USERNAME}/oracle-database`
 
 ## Instructions
  - Pull Oracle Base Image
