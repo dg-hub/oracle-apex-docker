@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ORDS_FILE=ords-20.4.3.050.1904.zip
 mkdir /opt/oracle/ords
 wget https://oraapex.blob.core.windows.net/downloads/$ORDS_FILE
