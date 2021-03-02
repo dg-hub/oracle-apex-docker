@@ -1,4 +1,4 @@
-ORACLE_PWD=`echo $RANDOM | shasum | cut -c 1-10 | base64`
+ORACLE_PWD=`echo $RANDOM | shasum | cut -c 1-10 | awk '{print $1"#"}'`
 CONTAINER_NAME=aci-oracleapex-$RANDOM
 az container create \
     --name $CONTAINER_NAME \
