@@ -1,5 +1,5 @@
 #Password Required Upper/Lower/Numeric/Special
-ORACLE_PWD=`echo $RANDOM | shasum | base64 | cut -c 1-7 | awk '{print toupper($1) tolower($1) "3#n"}'`
+ORACLE_PWD=`echo $RANDOM | shasum | base64 | cut -c 1-4 | awk '{print toupper($1) tolower($1) "3#n"}'`
 CONTAINER_NAME=aci-oracleapex-$RANDOM
 az container create \
     --name $CONTAINER_NAME \
