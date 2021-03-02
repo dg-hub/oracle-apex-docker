@@ -7,7 +7,7 @@ az container create \
     --image qrdgliddy/oracle-database:18.4.0-xe \
     --dns-name-label $CONTAINER_NAME \
     --query ipAddress.fqdn \
-    --environment-variables ORACLE_PWD=${ORACLE_PWD} ORACLE_CHARACTERSET=AL32UTF8 \
+    --environment-variables ORACLE_PWD="${ORACLE_PWD}" ORACLE_CHARACTERSET=AL32UTF8 \
     --gitrepo-url "https://github.com/dg-hub/oracle-apex-docker.git" \
     --gitrepo-mount-path "/opt/oracle/scripts" \
     --restart-policy Never \
