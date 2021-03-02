@@ -14,4 +14,5 @@ az container create \
     --cpu 4 \
     --memory 6 \
     --out table
+echo "Password: ${ORACLE_PWD}"
 
