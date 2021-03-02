@@ -22,6 +22,6 @@ This project requires the base docker image to be created first
 ## Instructions
  - Pull Oracle Base Image
    - `docker pull <username>/oracle-database:18.4.0-xe`
- - Run the installer 
+ - Run the deployment script 
    - `git clone https://github.com/dg-hub/oracle-apex-docker.git`
-   - `./oracle-apex-docker/run.sh`
+   - `./oracle-apex-docker/deploy.sh`
