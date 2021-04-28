@@ -3,7 +3,7 @@
 cd /tmp/apex
 su -p oracle -c "sqlplus / as sysdba <<EOF
 ALTER SESSION SET CONTAINER = ${ORACLE_PDB:-XEPDB1};
-@apxsilentins.sql SYSAUX SYSAUX TEMP /i/ ${ORACLE_PWD} ${ORACLE_PWD} ${ORACLE_PWD} ${ORACLE_PWD}
+@apxsilentins.sql SYSAUX SYSAUX TEMP /i/ ${ORACLE_PWD} ${ORACLE_PWD} ${ORACLE_PWD} ${APEX_PWD}
 EOF"
 su -p oracle -c "sqlplus / as sysdba <<EOF
 ALTER USER ANONYMOUS ACCOUNT UNLOCK;
